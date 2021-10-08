@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.15.3)
+cmake_minimum_required(VERSION 3.20)
 
 project(depend_on_me
         VERSION "0.1.1"
