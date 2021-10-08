@@ -18,3 +18,10 @@ security.
 * [Fetch Content](https://cmake.org/cmake/help/latest/module/FetchContent.html)
 * [Hunter](https://hunter.readthedocs.io/en/latest/)
 * [Vcpkg](https://vcpkg.io/en/index.html)
+
+## GitHub Action Workflows
+
+* All Dependency Managers will be using CMake as its build system
+* All will be tested on the "latest" runners on GitHub Workflow: Linux, MacOS and
+  Windows
+* Caching will be attempted with all - currently implemented for Conan and Vcpkg
