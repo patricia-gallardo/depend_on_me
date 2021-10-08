@@ -15,6 +15,9 @@ jobs:
     defaults:
       run:
         working-directory: conan_project
+    env:
+      CONAN_USER_HOME: "${{ github.workspace }}/CONAN_CACHE"
+      CONAN_USER_HOME_SHORT: "${{ github.workspace }}/CONAN_CACHE/short"
     strategy:
       fail-fast: false
       matrix:
@@ -30,6 +33,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: turtlebrowser/get-conan@main
+
+      - name: Cache Conan
+        uses: actions/cache@v2
+        env:
+          cache-name: conan-modules
+        with:
+          path: ${{ env.CONAN_USER_HOME }}
+          key: ${{ matrix.conf.os }}-${{ matrix.cmake-build-type }}-${{ hashFiles('conan_project/conanfile.py') }}
 
       - name: Install Linux dependencies for Conan
         if: matrix.conf.os == 'ubuntu-latest'
