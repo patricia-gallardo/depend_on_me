@@ -5,7 +5,7 @@ project(depend_on_me_cpm
         DESCRIPTION "Some description"
         LANGUAGES CXX)
 
-set(CMAKE_CXX_STANDARD 14
+set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_compile_definitions(_HAS_AUTO_PTR_ETC=1)
 
