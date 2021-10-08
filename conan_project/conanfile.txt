@@ -3,5 +3,10 @@ sfml/2.5.1@_/_
 catch2/2.13.7@_/_
 fmt/8.0.1@_/_
 
+[options]
+sfml:audio=True
+sfml:graphics=True
+sfml:window=True
+
 [generators]
 cmake
