@@ -1,5 +1,8 @@
 name: CMake Vcpkg
 
+env:
+  VCPKG_BINARY_SOURCES: 'clear;nuget,GitHub,readwrite'
+
 on:
   push:
     branches: [ main ]
