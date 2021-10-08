@@ -11,6 +11,12 @@ dependency management still has no clear winner. In this talk I will look into w
 dependency management might look like in modern C++ projects and how that relates to
 security.
 
+## Dependencies required
+
+* [SFML](https://github.com/SFML/SFML) (version 2.5.1)
+* [Catch2](https://github.com/catchorg/Catch2) (version 2.13.7)
+* [fmt](https://github.com/fmtlib/fmt) (version 8.0.1)
+
 ## Tools represented in the repo
 
 * [Conan](https://conan.io/)
