@@ -10,3 +10,7 @@ sfml:window=True
 
 [generators]
 cmake
+cmake_multi
+cmake_paths
+cmake_find_package
+cmake_find_package_multi
