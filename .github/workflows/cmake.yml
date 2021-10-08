@@ -16,8 +16,8 @@ jobs:
       fail-fast: false
       matrix:
         conf:
-          - name: Ubuntu Latest
-            os: ubuntu-latest
+#          - name: Ubuntu Latest # Conan does not support SFML on Linux atm
+#            os: ubuntu-latest
           - name: MacOS Latest
             os: macos-latest
           - name: Windows Latest
