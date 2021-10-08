@@ -16,12 +16,20 @@ jobs:
       fail-fast: false
       matrix:
         conf:
-          - name: Ubuntu Latest
-            os: ubuntu-latest
-          - name: MacOS Latest
-            os: macos-latest
-          - name: Windows Latest
-            os: windows-latest
+          - name: Ubuntu 20.04
+            os: ubuntu-20.04
+          - name: Ubuntu 18.04
+            os: ubuntu-18.04
+          - name: MacOS 11
+            os: macos-11
+          - name: MacOS 10.15
+            os: macos-10.15
+          - name: Windows 2022
+            os: windows-2022
+          - name: Windows 2019
+            os: windows-2019
+          - name: Windows 2016
+            os: windows-2016
         cmake-build-type: [ Debug, Release ]
 
     steps:
