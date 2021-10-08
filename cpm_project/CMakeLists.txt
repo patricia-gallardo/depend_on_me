@@ -7,6 +7,7 @@ project(depend_on_me_cpm
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+add_compile_definitions(_HAS_AUTO_PTR_ETC=1)
 
 if (NOT EXISTS "${CMAKE_BINARY_DIR}/CPM.cmake")
     message(STATUS "Downloading CPM.cmake from https://github.com/cpm-cmake")
