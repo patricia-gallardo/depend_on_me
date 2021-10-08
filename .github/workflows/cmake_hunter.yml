@@ -1,4 +1,4 @@
-name: CMake Root
+name: CMake Hunter
 
 on:
   push:
@@ -12,6 +12,9 @@ jobs:
   build:
     name: "${{ matrix.conf.name }} | ${{ matrix.cmake-build-type }}"
     runs-on: ${{ matrix.conf.os }}
+    defaults:
+      run:
+        working-directory: hunter_project
     strategy:
       fail-fast: false
       matrix:
