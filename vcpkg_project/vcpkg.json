@@ -1,0 +1,10 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg/master/scripts/vcpkg.schema.json",
+  "name": "depend-on-me",
+  "version": "0.1",
+  "dependencies": [
+    "sfml",
+    "fmt",
+    "catch2"
+  ]
+}
