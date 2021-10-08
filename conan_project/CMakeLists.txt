@@ -20,6 +20,7 @@ conan_check(REQUIRED)
 conan_cmake_autodetect(settings)
 conan_cmake_install(PATH_OR_REFERENCE ${CMAKE_CURRENT_SOURCE_DIR}/conanfile.txt BUILD missing SETTINGS ${settings})
 
+set(CMAKE_PREFIX_PATH ${CMAKE_BINARY_DIR})
 message(STATUS "CMAKE_MODULE_PATH  is ${CMAKE_MODULE_PATH}")
 
 enable_testing()
