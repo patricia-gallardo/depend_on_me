@@ -33,6 +33,21 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Create vcpkg build folder
+        run: |
+          mkdir -p ${{runner.workspace}}/build/vcpkg_installed
+          mkdir -p ${{runner.workspace}}/build/_deps
+
+      - name: Cache vcpkg
+        uses: actions/cache@v2
+        env:
+          cache-name: vcpkg-modules
+        with:
+          path: |
+            ${{runner.workspace}}/build/vcpkg_installed
+            ${{runner.workspace}}/build/_deps
+          key: ${{ matrix.conf.os }}-${{ matrix.cmake-build-type }}-${{ hashFiles('vcpkg.json') }}
+
       - name: Install Linux dependencies for Vcpkg
         if: matrix.conf.os == 'ubuntu-latest'
         run: |
