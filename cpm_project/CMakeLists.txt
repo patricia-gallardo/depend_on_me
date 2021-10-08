@@ -19,6 +19,8 @@ CPMAddPackage("gh:catchorg/Catch2#v2.13.7")
 CPMAddPackage("gh:fmtlib/fmt#8.0.1")
 CPMAddPackage("gh:SFML/SFML#2.5.1")
 
+message(STATUS "CMAKE_MODULE_PATH  is ${CMAKE_MODULE_PATH}")
+
 enable_testing()
 
 add_subdirectory(src)
