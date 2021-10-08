@@ -31,7 +31,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Install Linux dependencies for Vcpkg
-        if: matrix.configurations.os == 'ubuntu-latest'
+        if: matrix.conf.os == 'ubuntu-latest'
         run: |
           sudo apt-get update
           sudo apt-get install ninja-build pkg-config curl zip unzip tar cmake build-essential libx11-dev libxrandr-dev libxi-dev libudev-dev libgl1-mesa-dev
