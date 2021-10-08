@@ -46,7 +46,7 @@ jobs:
           path: |
             ${{runner.workspace}}/build/vcpkg_installed
             ${{runner.workspace}}/build/_deps
-          key: ${{ matrix.conf.os }}-${{ matrix.cmake-build-type }}-${{ hashFiles('vcpkg.json') }}
+          key: ${{ matrix.conf.os }}-${{ matrix.cmake-build-type }}-${{ hashFiles('vcpkg-modules/vcpkg.json') }}
 
       - name: Install Linux dependencies for Vcpkg
         if: matrix.conf.os == 'ubuntu-latest'
