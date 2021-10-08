@@ -49,7 +49,7 @@ jobs:
           key: ${{ matrix.conf.os }}-${{ matrix.cmake-build-type }}-${{ hashFiles('vcpkg_project/vcpkg.json') }}
 
       - name: Install Linux dependencies for Vcpkg
-        if: matrix.conf.os == 'ubuntu-latest'
+        if: startsWith(matrix.conf.os, 'ubuntu')
         run: |
           sudo apt-get update
           sudo apt-get install ninja-build pkg-config curl zip unzip tar make cmake build-essential libx11-dev libxrandr-dev libxi-dev libudev-dev libgl1-mesa-dev

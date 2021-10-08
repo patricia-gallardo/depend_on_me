@@ -43,7 +43,7 @@ jobs:
           key: ${{ matrix.conf.os }}-${{ matrix.cmake-build-type }}-${{ hashFiles('conan_project/conanfile.txt') }}
 
       - name: Install Linux dependencies for Conan
-        if: matrix.conf.os == 'ubuntu-latest'
+        if: startsWith(matrix.conf.os, 'ubuntu')
         run: |
           sudo apt-get update
           sudo apt-get install libudev-dev

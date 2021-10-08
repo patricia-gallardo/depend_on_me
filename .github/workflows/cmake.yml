@@ -37,7 +37,7 @@ jobs:
       - uses: turtlebrowser/get-conan@main
 
       - name: Install Linux dependencies for All
-        if: matrix.conf.os == 'ubuntu-latest'
+        if: startsWith(matrix.conf.os, 'ubuntu')
         run: |
           sudo apt-get update
           sudo apt-get install ninja-build pkg-config curl zip unzip tar make cmake build-essential libx11-dev libxrandr-dev libxi-dev libudev-dev libgl1-mesa-dev libopenal-dev libvorbis-dev libflac-dev
