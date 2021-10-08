@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.20)
 project(depend_on_me
         VERSION "0.1.1"
         DESCRIPTION "Some description"
-        LANGUAGES C CXX ASM)
+        LANGUAGES CXX)
 
 include(ExternalProject)
 function(add_sub_project sub_directory)

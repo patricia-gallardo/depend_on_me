@@ -24,7 +24,7 @@ endif ()
 project(depend_on_me_vcpkg
         VERSION "0.1.1"
         DESCRIPTION "Some description"
-        LANGUAGES C CXX ASM)
+        LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
