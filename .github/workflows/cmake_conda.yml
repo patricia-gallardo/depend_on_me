@@ -31,6 +31,10 @@ jobs:
           - name: Windows Latest
             os: windows-latest
             shell: cmd /C call {0}
+        # Note that while we test on both Debug and Release,
+        # some libraries may not work on Debug on Windows as conda-forge does not
+        # provide Debug libraries for Windows and STL is not ABI compatible between
+        # Debug and Release on MSVC
         cmake-build-type: [ Debug, Release ]
 
     steps:
@@ -40,6 +44,12 @@ jobs:
         with:
           activate-environment: depend-on-me-env-env
           environment-file: conda_project/environment.yml
+
+      - name: Some basic system dependencies (CDT, see https://conda-forge.org/docs/maintainer/knowledge_base.html#core-dependency-tree-packages-cdts) are expected to be found in the system
+        if: startsWith(matrix.conf.os, 'ubuntu')
+        run: |
+          sudo apt-get update
+          sudo apt-get install libudev-dev
 
       - name: Configure CMake
         run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{ matrix.cmake-build-type }}
