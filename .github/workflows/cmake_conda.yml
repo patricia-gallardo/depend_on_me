@@ -1,0 +1,52 @@
+name: CMake Conda
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: "${{ matrix.conf.name }} | ${{ matrix.cmake-build-type }}"
+    runs-on: ${{ matrix.conf.os }}
+    defaults:
+      run:
+        working-directory: conda_project
+        # See https://github.com/conda-incubator/setup-miniconda#use-a-default-shell 
+        # for the use of a default shell to ensure that the environment is sourced
+        shell: ${{ matrix.conf.shell }}
+    strategy:
+      fail-fast: false
+      matrix:
+        conf:
+          - name: Ubuntu Latest
+            os: ubuntu-latest
+            shell: bash -l {0}
+          - name: MacOS Latest
+            os: macos-latest
+            shell: bash -l {0}
+          - name: Windows Latest
+            os: windows-latest
+            shell: cmd /C call {0}
+        cmake-build-type: [ Debug, Release ]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: conda-incubator/setup-miniconda@v2
+        with:
+          activate-environment: depend-on-me-env-env
+          environment-file: conda_project/environment.yml
+
+      - name: Configure CMake
+        run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{ matrix.cmake-build-type }}
+
+      - name: Build
+        run: cmake --build ${{github.workspace}}/build --config ${{ matrix.cmake-build-type }}
+
+      - name: Test
+        working-directory: ${{github.workspace}}/build
+        run: ctest -C ${{ matrix.cmake-build-type }}
