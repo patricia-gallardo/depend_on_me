@@ -24,8 +24,8 @@ jobs:
             os: macos-11
           - name: MacOS 10.15
             os: macos-10.15
-          - name: Windows 2022
-            os: windows-2022
+#          - name: Windows 2022 # Issue on vcpkg currently
+#            os: windows-2022
           - name: Windows 2019
             os: windows-2019
           - name: Windows 2016
