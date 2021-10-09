@@ -36,6 +36,7 @@ security.
 * [Fetch Content](https://cmake.org/cmake/help/latest/module/FetchContent.html)
 * [Hunter](https://hunter.readthedocs.io/en/latest/)
 * [Vcpkg](https://vcpkg.io/en/index.html)
+* [Conda](https://docs.conda.io) with [conda-forge](https://conda-forge.org/)-provided dependencies.
 
 ## GitHub Action Workflows
 
