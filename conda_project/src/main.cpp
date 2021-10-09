@@ -3,8 +3,8 @@
 #include <SFML/Graphics.hpp>
 
 int main() {
-    fmt::print("Hello {}", "CPM");
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Hello CPM");
+    fmt::print("Hello {}", "Conda");
+    sf::RenderWindow window(sf::VideoMode(800, 600), "Hello Conda");
     while (window.isOpen()) {
         sf::Event event;
         while (window.pollEvent(event)) {
