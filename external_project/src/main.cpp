@@ -3,8 +3,8 @@
 #include <SFML/Graphics.hpp>
 
 int main() {
-    fmt::print("Hello {}", "FetchContent");
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Hello FetchContent");
+    fmt::print("Hello {}", "ExternalProject");
+    sf::RenderWindow window(sf::VideoMode(800, 600), "Hello ExternalProject");
     while (window.isOpen()) {
         sf::Event event;
         while (window.pollEvent(event)) {
