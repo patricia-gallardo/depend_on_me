@@ -1,5 +1,7 @@
 [![CMake Conan](https://github.com/patricia-gallardo/depend_on_me/actions/workflows/cmake_conan.yml/badge.svg)](https://github.com/patricia-gallardo/depend_on_me/actions/workflows/cmake_conan.yml)
 
+[![CMake Conda](https://github.com/patricia-gallardo/depend_on_me/actions/workflows/cmake_conda.yml/badge.svg)](https://github.com/patricia-gallardo/depend_on_me/actions/workflows/cmake_conda.yml)
+
 [![CMake CPM](https://github.com/patricia-gallardo/depend_on_me/actions/workflows/cmake_cpm.yml/badge.svg)](https://github.com/patricia-gallardo/depend_on_me/actions/workflows/cmake_cpm.yml)
 
 [![CMake Fetch Content](https://github.com/patricia-gallardo/depend_on_me/actions/workflows/cmake_fetch_content.yml/badge.svg)](https://github.com/patricia-gallardo/depend_on_me/actions/workflows/cmake_fetch_content.yml)
