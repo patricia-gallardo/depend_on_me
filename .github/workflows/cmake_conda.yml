@@ -22,9 +22,9 @@ jobs:
       fail-fast: false
       matrix:
         conf:
-          - name: Ubuntu Latest
-            os: ubuntu-latest
-            shell: bash -l {0}
+#          - name: Ubuntu Latest
+#            os: ubuntu-latest
+#            shell: bash -l {0}
           - name: MacOS Latest
             os: macos-latest
             shell: bash -l {0}
