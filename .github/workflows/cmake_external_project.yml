@@ -1,0 +1,47 @@
+name: CMake Fetch Content
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: "${{ matrix.conf.name }} | ${{ matrix.cmake-build-type }}"
+    runs-on: ${{ matrix.conf.os }}
+    defaults:
+      run:
+        working-directory: external_project
+    strategy:
+      fail-fast: false
+      matrix:
+        conf:
+          - name: Ubuntu Latest
+            os: ubuntu-latest
+          - name: MacOS Latest
+            os: macos-latest
+          - name: Windows Latest
+            os: windows-latest
+        cmake-build-type: [ Debug, Release ]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install Linux dependencies for ExternalProject
+        if: startsWith(matrix.conf.os, 'ubuntu')
+        run: |
+          sudo apt-get update
+          sudo apt-get install libx11-dev libxrandr-dev libudev-dev libgl1-mesa-dev libopenal-dev libvorbis-dev libflac-dev
+
+      - name: Configure CMake
+        run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{ matrix.cmake-build-type }}
+
+      - name: Build
+        run: cmake --build ${{github.workspace}}/build --config ${{ matrix.cmake-build-type }}
+
+      - name: Test
+        working-directory: ${{github.workspace}}/build
+        run: ctest -C ${{ matrix.cmake-build-type }}
