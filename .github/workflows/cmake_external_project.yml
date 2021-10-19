@@ -1,4 +1,4 @@
-name: CMake Fetch Content
+name: CMake ExternalProject
 
 on:
   push:
