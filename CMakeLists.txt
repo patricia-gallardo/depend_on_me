@@ -16,9 +16,7 @@ function(add_sub_project sub_directory)
             )
 endfunction()
 
-if (NOT ${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
-    add_sub_project(conan_project)
-endif ()
+add_sub_project(conan_project)
 #add_sub_project(conda_project) # Should be driven from CMake but isn't right now
 add_sub_project(cpm_project)
 #add_sub_project(external_project) # Not sure what is going wrong here
