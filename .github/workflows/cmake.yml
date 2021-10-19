@@ -12,6 +12,8 @@ jobs:
   build:
     name: "${{ matrix.conf.name }} | ${{ matrix.cmake-build-type }}"
     runs-on: ${{ matrix.conf.os }}
+    env:
+      CONAN_SYSREQUIRES_MODE: enabled
     strategy:
       fail-fast: false
       matrix:

@@ -16,14 +16,15 @@ jobs:
       run:
         working-directory: conan_project
     env:
+      CONAN_SYSREQUIRES_MODE: enabled
       CONAN_USER_HOME: "${{ github.workspace }}/CONAN_CACHE"
       CONAN_USER_HOME_SHORT: "${{ github.workspace }}/CONAN_CACHE/short"
     strategy:
       fail-fast: false
       matrix:
         conf:
-#          - name: Ubuntu Latest # Conan does not support SFML on Linux atm
-#            os: ubuntu-latest
+          - name: Ubuntu Latest
+            os: ubuntu-latest
           - name: MacOS Latest
             os: macos-latest
           - name: Windows Latest
