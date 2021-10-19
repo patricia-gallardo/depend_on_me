@@ -4,6 +4,8 @@
 
 [![CMake CPM](https://github.com/patricia-gallardo/depend_on_me/actions/workflows/cmake_cpm.yml/badge.svg)](https://github.com/patricia-gallardo/depend_on_me/actions/workflows/cmake_cpm.yml)
 
+[![CMake ExternalProject](https://github.com/patricia-gallardo/depend_on_me/actions/workflows/cmake_external_project.yml/badge.svg)](https://github.com/patricia-gallardo/depend_on_me/actions/workflows/cmake_external_project.yml)
+
 [![CMake Fetch Content](https://github.com/patricia-gallardo/depend_on_me/actions/workflows/cmake_fetch_content.yml/badge.svg)](https://github.com/patricia-gallardo/depend_on_me/actions/workflows/cmake_fetch_content.yml)
 
 [![CMake Hunter](https://github.com/patricia-gallardo/depend_on_me/actions/workflows/cmake_hunter.yml/badge.svg)](https://github.com/patricia-gallardo/depend_on_me/actions/workflows/cmake_hunter.yml)
