@@ -1,5 +1,4 @@
 #include <fmt/format.h>
-#include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 
 int main() {
