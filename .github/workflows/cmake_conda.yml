@@ -43,7 +43,7 @@ jobs:
       - uses: conda-incubator/setup-miniconda@v2
         with:
           activate-environment: depend-on-me-env-env
-          environment-file: conda_project/environment.yml
+          environment-file: unfinished/conda_project/environment.yml
 
       - name: Some basic system dependencies (CDT, see https://conda-forge.org/docs/maintainer/knowledge_base.html#core-dependency-tree-packages-cdts) are expected to be found in the system
         if: startsWith(matrix.conf.os, 'ubuntu')
