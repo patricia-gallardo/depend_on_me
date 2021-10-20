@@ -46,6 +46,8 @@ jobs:
       - name: Install Linux dependencies for Conan
         if: startsWith(matrix.conf.os, 'ubuntu')
         run: |
+          sudo cp /etc/apt/sources.list /etc/apt/sources.list~
+          sudo sed -Ei 's/^# deb-src /deb-src /' /etc/apt/sources.list
           sudo apt-get update
           sudo apt-get upgrade
           sudo apt-get build-dep libsfml-dev
