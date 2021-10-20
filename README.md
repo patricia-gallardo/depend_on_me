@@ -21,6 +21,12 @@ dependency management still has no clear winner. In this talk I will look into w
 dependency management might look like in modern C++ projects and how that relates to
 security.
 
+### Requirements for inclusion
+
+* Project uses CMake
+* Project uses the dependencies below
+* Dependencies are pulled as a part of the CMake process (CMake integration required)
+
 ## Dependencies required
 
 * [SFML](https://github.com/SFML/SFML) (version 2.5.1)
