@@ -14,7 +14,7 @@ jobs:
     runs-on: ${{ matrix.conf.os }}
     defaults:
       run:
-        working-directory: external_project
+        working-directory: unfinished/external_project
     strategy:
       fail-fast: false
       matrix:

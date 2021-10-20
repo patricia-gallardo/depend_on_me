@@ -14,7 +14,7 @@ jobs:
     runs-on: ${{ matrix.conf.os }}
     defaults:
       run:
-        working-directory: conda_project
+        working-directory: unfinished/conda_project
         # See https://github.com/conda-incubator/setup-miniconda#use-a-default-shell 
         # for the use of a default shell to ensure that the environment is sourced
         shell: ${{ matrix.conf.shell }}
