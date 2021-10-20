@@ -24,8 +24,6 @@ FetchContent_Declare(SFML
         GIT_TAG 2.5.1)
 FetchContent_MakeAvailable(SFML)
 
-message(STATUS "CMAKE_MODULE_PATH  is ${CMAKE_MODULE_PATH}")
-
 enable_testing()
 
 add_subdirectory(src)

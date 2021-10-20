@@ -10,8 +10,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include(setup_conan.cmake)
 
-message(STATUS "CMAKE_MODULE_PATH  is ${CMAKE_MODULE_PATH}")
-
 enable_testing()
 
 add_subdirectory(src)

@@ -58,9 +58,6 @@ foreach(LIB sfml-system sfml-audio sfml-window sfml-graphics)
                 IMPORTED_IMPLIB_DEBUG ${EXTERNAL_PREFIX}/lib/${CMAKE_STATIC_LIBRARY_PREFIX}${LIB}-d${CMAKE_STATIC_LIBRARY_SUFFIX})
 endforeach()
         
-
-message(STATUS "CMAKE_MODULE_PATH  is ${CMAKE_MODULE_PATH}")
-
 enable_testing()
 
 add_subdirectory(src)
