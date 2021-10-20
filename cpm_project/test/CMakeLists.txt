@@ -1,3 +1,5 @@
+enable_testing()
+
 find_package(Catch2 REQUIRED)
 
 add_executable(tests_cpm test.cpp)

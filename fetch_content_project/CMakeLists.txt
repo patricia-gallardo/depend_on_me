@@ -24,7 +24,5 @@ FetchContent_Declare(SFML
         GIT_TAG 2.5.1)
 FetchContent_MakeAvailable(SFML)
 
-enable_testing()
-
 add_subdirectory(src)
 add_subdirectory(test)
