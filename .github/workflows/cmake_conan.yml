@@ -42,6 +42,9 @@ jobs:
         with:
           path: ${{ env.CONAN_USER_HOME }}
           key: ${{ matrix.conf.os }}-${{ matrix.cmake-build-type }}-${{ hashFiles('conan_project/conanfile.txt') }}
+          
+      - name: remove conan's installation registry
+        run: conan remove --system-reqs '*'
 
       - name: Install Linux dependencies for Conan
         if: startsWith(matrix.conf.os, 'ubuntu')
@@ -64,3 +67,6 @@ jobs:
       - name: Test
         working-directory: ${{github.workspace}}/build
         run: ctest -C ${{ matrix.cmake-build-type }}
+        
+      - name: remove conan's installation registry
+        run: conan remove --system-reqs '*'
