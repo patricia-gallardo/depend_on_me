@@ -52,4 +52,4 @@ security.
 * All Dependency Managers will be using CMake as its build system
 * All will be tested on the "latest" runners on GitHub Workflow: Linux, MacOS and
   Windows
-* Caching will be attempted with all - currently implemented for Conan and Vcpkg
+* Caching will be attempted with all - currently implemented for Conan, Vcpkg, CPM and FetchContent
