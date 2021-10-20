@@ -19,10 +19,10 @@ jobs:
       fail-fast: false
       matrix:
         conf:
-          - name: Ubuntu Latest
-            os: ubuntu-latest
-          - name: MacOS Latest
-            os: macos-latest
+#          - name: Ubuntu Latest
+#            os: ubuntu-latest
+#          - name: MacOS Latest
+#            os: macos-latest
           - name: Windows Latest
             os: windows-latest
         cmake-build-type: [ Debug, Release ]
