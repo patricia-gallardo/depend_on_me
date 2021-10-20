@@ -10,5 +10,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include(setup_conan.cmake)
 
+enable_testing()
+
 add_subdirectory(src)
 add_subdirectory(test)

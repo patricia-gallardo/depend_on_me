@@ -57,6 +57,8 @@ foreach(LIB sfml-system sfml-audio sfml-window sfml-graphics)
                 IMPORTED_IMPLIB ${EXTERNAL_PREFIX}/lib/${CMAKE_STATIC_LIBRARY_PREFIX}${LIB}${CMAKE_STATIC_LIBRARY_SUFFIX}
                 IMPORTED_IMPLIB_DEBUG ${EXTERNAL_PREFIX}/lib/${CMAKE_STATIC_LIBRARY_PREFIX}${LIB}-d${CMAKE_STATIC_LIBRARY_SUFFIX})
 endforeach()
+        
+enable_testing()
 
 add_subdirectory(src)
 add_subdirectory(test)
