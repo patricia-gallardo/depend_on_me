@@ -1,7 +1,7 @@
 if (NOT EXISTS "${CMAKE_BINARY_DIR}/CPM.cmake")
-    message(STATUS "Downloading CPM.cmake from https://github.com/cpm-cmake")
-    file(DOWNLOAD "https://github.com/cpm-cmake/CPM.cmake/raw/v0.34.0/cmake/CPM.cmake"
-            "${CMAKE_BINARY_DIR}/CPM.cmake")
+    file(DOWNLOAD
+         "https://github.com/cpm-cmake/CPM.cmake/raw/v0.34.0/cmake/CPM.cmake"
+         "${CMAKE_BINARY_DIR}/CPM.cmake")
 endif ()
 
 include(${CMAKE_BINARY_DIR}/CPM.cmake)
