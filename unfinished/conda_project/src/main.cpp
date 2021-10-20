@@ -3,7 +3,7 @@
 #include <SFML/Graphics.hpp>
 
 int main() {
-    fmt::print("Hello {}", "Conda");
+    fmt::print("Hello {}\n", "Conda");
     sf::RenderWindow window(sf::VideoMode(800, 600), "Hello Conda");
     while (window.isOpen()) {
         sf::Event event;

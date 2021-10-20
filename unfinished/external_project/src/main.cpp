@@ -3,7 +3,7 @@
 #include <SFML/Graphics.hpp>
 
 int main() {
-    fmt::print("Hello {}", "ExternalProject");
+    fmt::print("Hello {}\n", "ExternalProject");
     sf::RenderWindow window(sf::VideoMode(800, 600), "Hello ExternalProject");
     while (window.isOpen()) {
         sf::Event event;

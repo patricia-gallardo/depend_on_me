@@ -3,7 +3,7 @@
 #include <SFML/Graphics.hpp>
 
 int main() {
-    fmt::print("Hello {}", "vcpkg");
+    fmt::print("Hello {}\n", "vcpkg");
     sf::RenderWindow window(sf::VideoMode(800, 600), "Hello vcpkg");
     while (window.isOpen()) {
         sf::Event event;

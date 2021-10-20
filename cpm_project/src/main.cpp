@@ -3,7 +3,7 @@
 #include <SFML/Graphics.hpp>
 
 int main() {
-    fmt::print("Hello {}", "CPM");
+    fmt::print("Hello {}\n", "CPM");
     sf::RenderWindow window(sf::VideoMode(800, 600), "Hello CPM");
     while (window.isOpen()) {
         sf::Event event;
