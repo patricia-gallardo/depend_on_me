@@ -30,6 +30,17 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Create FetchContent build folder
+        run: mkdir -p ${{runner.workspace}}/build/_deps
+
+      - name: Cache FetchContent build folder
+        uses: actions/cache@v2
+        env:
+          cache-name: fetch-content-modules
+        with:
+          path: ${{runner.workspace}}/build/_deps
+          key: ${{ matrix.conf.os }}-${{ matrix.cmake-build-type }}-${{ hashFiles('fetch_content_project/CMakeLists.txt') }}
+
       - name: Install Linux dependencies for FetchContent
         if: startsWith(matrix.conf.os, 'ubuntu')
         run: |
