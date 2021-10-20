@@ -31,14 +31,14 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Create CPM build folder
-        run: mkdir -p ${{runner.workspace}}/build/_deps
+        run: mkdir -p ${{runner.workspace}}/depend_on_me/build/_deps
 
       - name: Cache CPM build folder
         uses: actions/cache@v2
         env:
           cache-name: cpm-modules
         with:
-          path: ${{runner.workspace}}/build/_deps
+          path: ${{runner.workspace}}/depend_on_me/build/_deps
           key: ${{ matrix.conf.os }}-${{ matrix.cmake-build-type }}-${{ hashFiles('cpm_project/CMakeLists.txt') }}
 
       - name: Install Linux dependencies for CPM

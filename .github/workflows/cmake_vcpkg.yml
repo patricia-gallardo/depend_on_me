@@ -35,8 +35,8 @@ jobs:
 
       - name: Create vcpkg build folder
         run: |
-          mkdir -p ${{runner.workspace}}/build/vcpkg_installed
-          mkdir -p ${{runner.workspace}}/build/_deps
+          mkdir -p ${{runner.workspace}}/depend_on_me/build/vcpkg_installed
+          mkdir -p ${{runner.workspace}}/depend_on_me/build/_deps
 
       - name: Cache vcpkg
         uses: actions/cache@v2
@@ -44,8 +44,8 @@ jobs:
           cache-name: vcpkg-modules
         with:
           path: |
-            ${{runner.workspace}}/build/vcpkg_installed
-            ${{runner.workspace}}/build/_deps
+            ${{runner.workspace}}/depend_on_me/build/vcpkg_installed
+            ${{runner.workspace}}/depend_on_me/build/_deps
           key: ${{ matrix.conf.os }}-${{ matrix.cmake-build-type }}-${{ hashFiles('vcpkg_project/vcpkg.json') }}
 
       - name: Install Linux dependencies for Vcpkg
