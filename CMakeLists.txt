@@ -17,9 +17,11 @@ function(add_sub_project sub_directory)
 endfunction()
 
 add_sub_project(conan_project)
-#add_sub_project(conda_project) # Should be driven from CMake but isn't right now
 add_sub_project(cpm_project)
-#add_sub_project(external_project) # Not sure what is going wrong here
 add_sub_project(fetch_content_project)
-add_sub_project(hunter_project)
 add_sub_project(vcpkg_project)
+
+# Unfinished examples
+# add_sub_project(unfinished/conda_project) # Should be driven from CMake but isn't right now
+# add_sub_project(unfinished/external_project) # Not sure what is going wrong here
+# add_sub_project(unfinished/hunter_project) # Needs implementation

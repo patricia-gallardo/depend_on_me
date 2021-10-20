@@ -1,14 +1,8 @@
 [![CMake Conan](https://github.com/patricia-gallardo/depend_on_me/actions/workflows/cmake_conan.yml/badge.svg)](https://github.com/patricia-gallardo/depend_on_me/actions/workflows/cmake_conan.yml)
 
-[![CMake Conda](https://github.com/patricia-gallardo/depend_on_me/actions/workflows/cmake_conda.yml/badge.svg)](https://github.com/patricia-gallardo/depend_on_me/actions/workflows/cmake_conda.yml)
-
 [![CMake CPM](https://github.com/patricia-gallardo/depend_on_me/actions/workflows/cmake_cpm.yml/badge.svg)](https://github.com/patricia-gallardo/depend_on_me/actions/workflows/cmake_cpm.yml)
 
-[![CMake ExternalProject](https://github.com/patricia-gallardo/depend_on_me/actions/workflows/cmake_external_project.yml/badge.svg)](https://github.com/patricia-gallardo/depend_on_me/actions/workflows/cmake_external_project.yml)
-
 [![CMake Fetch Content](https://github.com/patricia-gallardo/depend_on_me/actions/workflows/cmake_fetch_content.yml/badge.svg)](https://github.com/patricia-gallardo/depend_on_me/actions/workflows/cmake_fetch_content.yml)
-
-[![CMake Hunter](https://github.com/patricia-gallardo/depend_on_me/actions/workflows/cmake_hunter.yml/badge.svg)](https://github.com/patricia-gallardo/depend_on_me/actions/workflows/cmake_hunter.yml)
 
 [![CMake Vcpkg](https://github.com/patricia-gallardo/depend_on_me/actions/workflows/cmake_vcpkg.yml/badge.svg)](https://github.com/patricia-gallardo/depend_on_me/actions/workflows/cmake_vcpkg.yml)
 
@@ -38,9 +32,14 @@ security.
 * [Conan](https://conan.io/)
 * [CPM](https://github.com/cpm-cmake/CPM.cmake)
 * [Fetch Content](https://cmake.org/cmake/help/latest/module/FetchContent.html)
-* [Hunter](https://hunter.readthedocs.io/en/latest/)
 * [Vcpkg](https://vcpkg.io/en/index.html)
+
+### Unfinished examples
+
 * [Conda](https://docs.conda.io) with [conda-forge](https://conda-forge.org/)-provided dependencies.
+* [ExternalProject](https://cmake.org/cmake/help/latest/module/ExternalProject.html)  
+* [Hunter](https://hunter.readthedocs.io/en/latest/)
+
 
 ## GitHub Action Workflows
 
