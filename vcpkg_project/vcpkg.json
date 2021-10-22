@@ -2,9 +2,13 @@
   "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg/master/scripts/vcpkg.schema.json",
   "name": "depend-on-me",
   "version": "0.1",
+  "builtin-baseline": "4474aba1e77be2d643eb684298b7d5479cad9a1f",
   "dependencies": [
     "sfml",
     "fmt",
-    "catch2"
+    { "name": "catch2", "version>=": "2.13.7" }
+  ],
+  "overrides": [
+    { "name": "fmt", "version": "8.0.1" }
   ]
 }
