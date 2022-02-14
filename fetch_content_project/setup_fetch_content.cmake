@@ -1,5 +1,6 @@
 include(FetchContent)
 
+# a list of stuff for find_package to ignore
 set(handled_by_fetch_content "")
 
 FetchContent_Declare(Catch2
@@ -20,6 +21,11 @@ FetchContent_Declare(SFML
 FetchContent_MakeAvailable(SFML)
 list(APPEND handled_by_fetch_content SFML)
 
+# the original find_package gets renamed to _find_package
+# Idea from C++Now2017: Daniel Pfeifer "Effective CMake"
+# https://youtu.be/bsXLMQ6WgIk?t=3159
+# Note: there appears to be a typo in the presentation slides.
+# We need to check ${ARGV0}, not ${ARG0}.
 macro(find_package)
         if(NOT "${ARGV0}" IN_LIST handled_by_fetch_content)
                 _find_package(${ARGV})
