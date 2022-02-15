@@ -1,7 +1,7 @@
 include(FetchContent)
 
 # A hack that lets FetchContent cooperate with find_package
-set(handled_by_fetch_content "") # a list of packages for find_package to ignore
+set(HANDLED_BY_FETCH_CONTENT "") # a list of packages for find_package to ignore
 
 # Note: when you shadow a function, the previous definition
 # is still available by prefixing with an underscore
@@ -11,7 +11,7 @@ set(handled_by_fetch_content "") # a list of packages for find_package to ignore
 # Note: there appears to be a typo in the presentation slides.
 # We need to check ${ARGV0}, not ${ARG0}.
 macro(find_package)
-        if(NOT "${ARGV0}" IN_LIST handled_by_fetch_content)
+        if(NOT "${ARGV0}" IN_LIST HANDLED_BY_FETCH_CONTENT)
                 _find_package(${ARGV})
         else()
                 message(DEBUG "${ARGV0} already fetched")
@@ -19,7 +19,7 @@ macro(find_package)
 endmacro()
 
 macro(FetchContent_MakeAvailable)
-        list(APPEND handled_by_fetch_content ${ARGV0})
+        list(APPEND HANDLED_BY_FETCH_CONTENT ${ARGV0})
         _FetchContent_MakeAvailable(${ARGV})
 endmacro()
 
