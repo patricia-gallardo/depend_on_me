@@ -1,7 +1,8 @@
 {
   "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg/master/scripts/vcpkg.schema.json",
   "name": "depend-on-me",
-  "version": "0.1",
+  "version": "1.0",
+  "builtin-baseline": "fe63cf7181496198335e61ed35f6eba2ad4302d9",
   "dependencies": [
     "sfml",
     "fmt",
