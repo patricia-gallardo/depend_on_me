@@ -38,7 +38,7 @@ jobs:
         id: conan
         uses: turtlebrowser/get-conan@main
         with:
-          version: 1.59.0
+          version: 1.60.0
 
       - name: Cache Conan
         uses: actions/cache@v2
